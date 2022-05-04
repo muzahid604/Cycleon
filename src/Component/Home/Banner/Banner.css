@@ -12,12 +12,21 @@
     position: absolute;
     top: 20px;
     left: 10px;
+    font-size: 60px;
+    margin-top: 30%;
+    margin-left: 20%;
+    color: rgb(214, 50, 38);
 }
 
 .banner-text h1 {
     font-size: 60px;
-    margin-top: 60%;
+    color: rgb(179, 17, 6);
 }
+
+.banner-text h2 {
+    color: rgb(201, 21, 8);
+}
+
 
 .special-text {
     color: rgb(189, 6, 98);

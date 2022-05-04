@@ -22,9 +22,9 @@ const Banner = () => {
                 </Carousel.Item>
 
             </Carousel>
-            <img className='banner-img' src="" alt="" />
             <div className='banner-text'>
-                <h1>FLY WITH <span className='text-primary'> CYCLEON </span></h1>
+                <h1>FLY WITH <span className='special-text'> CYCLEON </span></h1>
+                <h2>The Right Bike for Your Lifestyle</h2>
             </div>
         </div>
     );
