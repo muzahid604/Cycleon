@@ -12,7 +12,7 @@ const Item = ({ item }) => {
                 <h4>{name}</h4>
                 <h6> <span>FOB PRICES:</span> {FOBPrices}</h6>
                 <h6> <span> MIN. ORDER:</span>  {MinOrder}<small>pics</small></h6>
-                <Link to='/pricing'>
+                <Link to='/'>
                     <Button variant="outline-dark rounded-pill fw-bold">UPDATE</Button></Link>
             </div>
         </div>

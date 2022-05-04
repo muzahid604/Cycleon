@@ -1,0 +1,15 @@
+.item-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin: 5rem;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .item-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0.5rem;
+    }
+}

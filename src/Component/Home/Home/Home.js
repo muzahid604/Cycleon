@@ -1,7 +1,8 @@
 import React from 'react';
-import Items from '../../Items/Items';
 import Banner from '../Banner/Banner';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import HomeItems from '../HomeItems/HomeItems';
 import Social from '../Social/Social';
 
 const Home = () => {
@@ -9,9 +10,9 @@ const Home = () => {
         <div>
             <Header></Header>
             <Banner></Banner>
-            <Items></Items>
+            <HomeItems></HomeItems>
             <Social></Social>
-
+            <Footer></Footer>
         </div>
     );
 };
