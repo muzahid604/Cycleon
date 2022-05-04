@@ -20,11 +20,11 @@
 
 .banner-text h1 {
     font-size: 60px;
-    color: rgb(179, 17, 6);
+    color: black;
 }
 
 .banner-text h2 {
-    color: rgb(201, 21, 8);
+    color: rgb(58, 4, 4);
 }
 
 
@@ -34,10 +34,13 @@
 
 @media only screen and (max-width: 600px) {
     .banner-text h1 {
-        font-size: 50px;
-        margin-top: 100px;
-        margin-bottom: 1rem;
+        font-size: 30px;
+        margin-top: 0;
         color: rgb(160, 127, 10);
+    }
+
+    .banner-text h2 {
+        font-size: 20px;
     }
 
     .banner img {
