@@ -1,0 +1,23 @@
+.item {
+    border-radius: 10px;
+    border: 2px solid rgb(24, 23, 21);
+}
+
+.item img {
+    border-radius: 8px 8px 0px 0px;
+    height: 220px;
+}
+
+.item h6 {
+    color: rgb(43, 13, 13);
+    font-size: 20px;
+}
+
+.item span {
+    font-size: 15px;
+    color: gray;
+}
+
+.item small {
+    color: rgba(112, 8, 8, 0.829);
+}

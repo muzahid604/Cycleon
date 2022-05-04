@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Item from './Item/Item';
+import './Items.css';
 
 const Items = () => {
     const [items, setItems] = useState([]);
@@ -8,9 +10,13 @@ const Items = () => {
             .then(data => setItems(data))
     }, [])
     return (
-        <div>
-            <h1 className='text-center'>total items{items.length}</h1>
-
+        <div className='item-card'>
+            {
+                items?.map(item => <Item
+                    key={item._id}
+                    item={item}
+                ></Item>)
+            }
         </div>
     );
 };
