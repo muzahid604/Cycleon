@@ -1,10 +1,10 @@
 .item {
-    border-radius: 10px;
-    border: 2px solid rgb(24, 23, 21);
+    box-shadow: 5px 5px 3px;
+    border: 1px solid rgb(24, 23, 21);
 }
 
 .item img {
-    border-radius: 8px 8px 0px 0px;
+    /* border-radius: 8px 8px 0px 0px; */
     height: 220px;
 }
 

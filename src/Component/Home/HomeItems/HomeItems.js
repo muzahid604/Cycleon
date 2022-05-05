@@ -5,16 +5,20 @@ import './HomeItems.css';
 
 const HomeItems = () => {
     const [items] = useItems();
-    const homeItems = items.slice(3, 9);
+    const homeItems = items.slice(0, 6);
 
     return (
-        <div className='item-card'>
-            {
-                homeItems?.map(homeItem => <Item
-                    key={homeItem._id}
-                    item={homeItem}
-                ></Item>)
-            }
+        <div>
+            <h2 className='text-primary my-5 text-center'>INVENTORY</h2>
+            <div className='item-card'>
+
+                {
+                    homeItems?.map(homeItem => <Item
+                        key={homeItem._id}
+                        item={homeItem}
+                    ></Item>)
+                }
+            </div>
         </div>
     );
 };

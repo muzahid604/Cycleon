@@ -1,5 +1,5 @@
-import { Button } from 'react-bootstrap';
 import React from 'react';
+import './Header.css';
 import { Container, Form, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import { Link } from 'react-router-dom';
@@ -18,7 +18,7 @@ const Header = () => {
                             navbarScroll
                         >
                             <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>HOME</Link>
-                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>BIKES</Link>
+                            <Link style={{ textDecoration: 'none' }} to='/items' className='mx-3'>INVENTORY</Link>
                             <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>EQUIPMENTS</Link>
                             <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>FIND A DEALER</Link>
                             <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>BLOG</Link>
@@ -27,8 +27,8 @@ const Header = () => {
 
                         </Nav>
                         <Form className="d-flex">
-                            <Button variant="outline-success">LOGIN</Button>
-                        </Form>
+                            <Link to="/login" className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill'>LOG IN</Link>
+                            <Link to="/register" className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill'>SIGN UP</Link>                        </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

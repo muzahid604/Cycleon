@@ -1,18 +1,16 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 import HomeItems from '../HomeItems/HomeItems';
 import Social from '../Social/Social';
+import WhyChoose from '../WhyChoose/WhyChoose';
 
 const Home = () => {
     return (
         <div>
-            <Header></Header>
             <Banner></Banner>
             <HomeItems></HomeItems>
+            <WhyChoose></WhyChoose>
             <Social></Social>
-            <Footer></Footer>
         </div>
     );
 };
