@@ -3,6 +3,7 @@ import { Button, Form, Spinner } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialSign from '../SocialSign/SocialSign';
 
 const Register = () => {
     const [
@@ -66,6 +67,8 @@ const Register = () => {
                     </Form.Group><p className='m-2'>Already have an account? <Link to='/login' className=' text-danger' onClick={navigateLogin}>Please LogIn</Link></p>
                     <Button variant="text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill text-center" type="submit">SIGNUP</Button>
                 </Form>
+                <hr />
+                <SocialSign></SocialSign>
             </div>
         </div>
     );

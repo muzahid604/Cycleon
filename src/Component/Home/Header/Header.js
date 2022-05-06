@@ -3,8 +3,15 @@ import './Header.css';
 import { Container, Form, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <div>
             <Navbar expand="lg md">
@@ -19,16 +26,34 @@ const Header = () => {
                         >
                             <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>HOME</Link>
                             <Link style={{ textDecoration: 'none' }} to='/items' className='mx-3'>INVENTORY</Link>
-                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>EQUIPMENTS</Link>
-                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>FIND A DEALER</Link>
-                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>BLOG</Link>
-                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'  >ABOUT US</Link>
-
+                            {
+                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>EQUIPMENTS</Link>
+                                    : <p></p>
+                            }
+                            {
+                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>EQUIPMENTS</Link>
+                                    : <p></p>
+                            }
+                            {
+                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>EQUIPMENTS</Link>
+                                    : <p></p>
+                            }
+                            {
+                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>EQUIPMENTS</Link>
+                                    : <p></p>
+                            }
 
                         </Nav>
                         <Form className="d-flex">
-                            <Link to="/login" className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill'>LOG IN</Link>
-                            <Link to="/register" className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill'>SIGN UP</Link>                        </Form>
+                            {user ? <Link to='/login' onClick={logout} className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-danger hover-color rounded-pill'>LOG OUT</Link>
+                                : <Link to="/login" className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill'>LOG IN</Link>}
+
+
+                            {
+                                user ? <p></p> : <Link to="/register" className='mx-2 text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill'>SIGN UP</Link>
+
+                            }
+                        </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
