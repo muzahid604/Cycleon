@@ -65,7 +65,7 @@ const Register = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control ref={passRef} required type="password" placeholder="Password" />
                     </Form.Group><p className='m-2'>Already have an account? <Link to='/login' className=' text-danger' onClick={navigateLogin}>Please LogIn</Link></p>
-                    <Button variant="text-dark p-2 fw-bold btn-outline-success btn-light hover-color rounded-pill text-center" type="submit">SIGNUP</Button>
+                    <Button variant="text-dark p-2 fw-bold btn-outline-dark btn-light hover-color rounded-pill text-center" type="submit">SIGN UP</Button>
                 </Form>
                 <hr />
                 <SocialSign></SocialSign>
