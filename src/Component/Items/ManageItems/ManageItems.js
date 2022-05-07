@@ -5,7 +5,23 @@ import './ManageItems.css'
 
 
 const ManageItems = () => {
-    const [items] = useItems()
+    const [items, setItems] = useItems();
+    const handleDelete = id => {
+        const confirm = window.confirm('Are you sure?');
+        if (confirm) {
+            const url = `http://localhost:5000/items/${id}`
+            console.log(url)
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    const remaining = items.filter(item => item._id !== id);
+                    setItems(remaining);
+                })
+        }
+    }
     return (
         <div>
             <Table striped bordered hover>
@@ -24,7 +40,7 @@ const ManageItems = () => {
                                 <td className='text-center'>{item.name.slice(0, 30)}</td>
                                 <td className='text-center'><img className='table-img' src={item.picture} alt="" /></td>
                                 <td className='text-center'>{item.quantity}</td>
-                                <td className='text-center'><Button variant="outline-dark rounded-pill fw-bold">DELETE</Button></td>
+                                <td className='text-center'><Button onClick={() => handleDelete(item._id)} variant="outline-dark rounded-pill fw-bold">DELETE</Button></td>
                             </tr>
                         </tbody>
                     )
