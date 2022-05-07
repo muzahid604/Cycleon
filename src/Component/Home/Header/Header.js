@@ -27,11 +27,11 @@ const Header = () => {
                             <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>HOME</Link>
                             <Link style={{ textDecoration: 'none' }} to='/items' className='mx-3'>BIKES</Link>
                             {
-                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>MANAGE BIKES</Link>
+                                user ? <Link style={{ textDecoration: 'none' }} to='/manageItems' className='mx-3'>MANAGE BIKES</Link>
                                     : <p></p>
                             }
                             {
-                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>ADD BIKES</Link>
+                                user ? <Link style={{ textDecoration: 'none' }} to='/addItems' className='mx-3'>ADD BIKES</Link>
                                     : <p></p>
                             }
                             {

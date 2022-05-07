@@ -29,6 +29,7 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
 
     }
+    let from = location.state?.from?.pathname || "/";
     if (loading || sending) {
         return <div className='d-flex m-5 align-items-center justify-content-center mx-auto'>
             <Spinner className='d-flex align-items-center justify-content-center' animation="grow" />
@@ -41,7 +42,7 @@ const Login = () => {
             <h4 className='fs-1 text-success' >OOPS {error.message}</h4>
         </div>
     }
-    let from = location.state?.from?.pathname || "/";
+
     if (user) {
         navigate(from, { replace: true });
     }

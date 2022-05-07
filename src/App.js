@@ -4,7 +4,9 @@ import Blogs from './Component/Blogs/Blogs';
 import Footer from './Component/Home/Footer/Footer';
 import Header from './Component/Home/Header/Header';
 import Home from './Component/Home/Home/Home';
+import AddItems from './Component/Items/AddItems/AddItems';
 import Items from './Component/Items/Items';
+import ManageItems from './Component/Items/ManageItems/ManageItems';
 import Login from './Component/SignOption/Login/Login';
 import Register from './Component/SignOption/Register/Register';
 import RequireAuth from './Component/SignOption/RequierAuth/RequierAuth';
@@ -27,6 +29,16 @@ function App() {
         <Route path="/items" element={
           <RequireAuth>
             <Items></Items>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addItems" element={
+          <RequireAuth>
+            <AddItems></AddItems>
+          </RequireAuth>
+        }></Route>
+        <Route path="/manageItems" element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
