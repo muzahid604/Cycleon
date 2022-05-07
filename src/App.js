@@ -8,6 +8,7 @@ import Items from './Component/Items/Items';
 import Login from './Component/SignOption/Login/Login';
 import Register from './Component/SignOption/Register/Register';
 import RequireAuth from './Component/SignOption/RequierAuth/RequierAuth';
+import UpdateItem from './Component/UpdateItem/UpdateItem';
 
 
 
@@ -18,7 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
-
+        <Route path='/items/:itemsId' element={
+          <RequireAuth>
+            <UpdateItem></UpdateItem>
+          </RequireAuth>
+        }></Route>
         <Route path="/items" element={
           <RequireAuth>
             <Items></Items>

@@ -37,11 +37,8 @@ const Register = () => {
     const handleRegister = async (event) => {
         event.preventDefault();
         const name = nameRef.current.value;
-
         const email = emailRef.current.value;
-
         const password = passRef.current.value;
-
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: name });
     }
@@ -55,7 +52,7 @@ const Register = () => {
                 <Form onSubmit={handleRegister}>
                     <Form.Group className="mb-3" controlId="formGroupName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="name" placeholder="Enter name" />
+                        <Form.Control ref={nameRef} type="name" placeholder="Enter name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formGroupEmail">
                         <Form.Label>Email</Form.Label>

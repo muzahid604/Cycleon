@@ -1,10 +1,15 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Item.css';
 
 const Item = ({ item }) => {
-    const { name, picture, FOBPrices, MinOrder, description, quantity, supplier } = item;
+    const { _id, name, picture, FOBPrices, MinOrder, description, quantity, supplier } = item;
+    const navigate = useNavigate();
+
+    const navigateToItemDetail = _id => {
+        navigate(`/items/${_id}`);
+    }
     return (
         <div className='item text-center'>
             <img className='w-100' src={picture} alt="" />
@@ -15,8 +20,8 @@ const Item = ({ item }) => {
                 <h6> <span>FOB PRICES:</span> {FOBPrices}</h6>
                 <h6> <span> MIN. ORDER:</span>  {MinOrder}<small>pics</small></h6>
                 <h6> <span> Supplier:</span>  {supplier}</h6>
-                <Link to='/'>
-                    <Button variant="outline-dark rounded-pill fw-bold mt-5">UPDATE</Button></Link>
+
+                <Button onClick={() => navigateToItemDetail(_id)} variant="outline-dark rounded-pill fw-bold mt-5">UPDATE</Button>
             </div>
         </div>
     );
