@@ -13,7 +13,7 @@ Live link of this project:[CYCLEON](https://cycle-warehouse.firebaseapp.com/)
 
 
 
-### `Technologies used in this project.`
+### `Technologies used for client side in this project.`
 #### REACT
 #### REACT-ROUTER
 #### REACT-FIREBASE_HOOKS
@@ -25,5 +25,9 @@ Live link of this project:[CYCLEON](https://cycle-warehouse.firebaseapp.com/)
 #### FIREBASE
 #### FIREBASE-HOOKS
 
-# [https://cycle-warehouse.firebaseapp.com/](CYCLEON) to view it in your browser.
 
+### `Technologies used for server side in this project.`
+#### NODE.JS
+#### MONGODB
+
+## [https://cycle-warehouse.firebaseapp.com/](CYCLEON) to view it in your browser.
