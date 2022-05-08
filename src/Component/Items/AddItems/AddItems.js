@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { toast } from 'react-toastify';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../src/firebase.init'
 
@@ -18,7 +17,6 @@ const AddItems = () => {
         })
             .then(res => res.json())
             .then(result => {
-                toast('ADD YOUR BIKE')
                 console.log(result)
             });
     };
