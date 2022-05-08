@@ -77,6 +77,7 @@ const UpdateItem = () => {
                         <ListGroupItem><span>FOB PRICES:</span> {FOBPrices}</ListGroupItem>
                         <ListGroupItem><span> MIN. ORDER:</span>  {MinOrder}<small>pics</small></ListGroupItem>
                         <ListGroupItem> <span> Available: </span> {quantity}pics</ListGroupItem>
+                        <ListGroupItem> <span> Stock: </span> {quantity === 0 ? 'nill' : 'available'}</ListGroupItem>
                         <ListGroupItem><span> Supplier:</span>  {supplier}</ListGroupItem>
                     </ListGroup>
                     <Card.Body>
