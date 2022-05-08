@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 const AddItems = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        console.log(data)
         const url = `https://young-taiga-51882.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',
@@ -14,7 +13,9 @@ const AddItems = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log(result))
+            .then(result => {
+                console.log(result)
+            })
     };
     return (
         <div className='w-50  mx-auto border p-4 m-2' >
@@ -29,6 +30,7 @@ const AddItems = () => {
                 <input className='mb-2' placeholder='Enter MinOrder' type="number" {...register("MinOrder")} />
                 <input className='mb-2' type="submit" value="Add Bike" />
             </form>
+
         </div>
     );
 };

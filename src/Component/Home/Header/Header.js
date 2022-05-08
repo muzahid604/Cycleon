@@ -35,7 +35,7 @@ const Header = () => {
                                     : <p></p>
                             }
                             {
-                                user ? <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>MY BIKES</Link>
+                                user ? <Link style={{ textDecoration: 'none' }} to='/myBikes' className='mx-3'>MY BIKES</Link>
                                     : <p></p>
                             }
                             <Link style={{ textDecoration: 'none' }} to='/blogs' className='mx-3'>BLOGS</Link>

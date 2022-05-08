@@ -7,6 +7,7 @@ import Home from './Component/Home/Home/Home';
 import AddItems from './Component/Items/AddItems/AddItems';
 import Items from './Component/Items/Items';
 import ManageItems from './Component/Items/ManageItems/ManageItems';
+import MyBikes from './Component/MyBikes/MyBikes';
 import NotFound from './Component/NotFound/NotFound';
 import Login from './Component/SignOption/Login/Login';
 import Register from './Component/SignOption/Register/Register';
@@ -40,6 +41,11 @@ function App() {
         <Route path="/manageItems" element={
           <RequireAuth>
             <ManageItems></ManageItems>
+          </RequireAuth>
+        }></Route>
+        <Route path="/myBikes" element={
+          <RequireAuth>
+            <MyBikes></MyBikes>
           </RequireAuth>
         }></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
