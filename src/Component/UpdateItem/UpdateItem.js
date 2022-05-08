@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const UpdateItem = () => {
     const { itemsId } = useParams();
     const [item, setItem] = useState({});
+    const navigate = useNavigate();
+    const navigateToItemDetail = _id => {
+        navigate(`/items/${_id}`);
+    }
 
     useEffect(() => {
         const url = `https://young-taiga-51882.herokuapp.com/items/${itemsId}`
@@ -13,8 +17,7 @@ const UpdateItem = () => {
             .then(data => setItem(data))
     }, [itemsId])
 
-    let { name, picture, FOBPrices, MinOrder, description, quantity, supplier } = item;
-    console.log(item)
+    let { _id, name, picture, FOBPrices, MinOrder, description, quantity, supplier } = item;
     const updateForDelivery = () => {
         if (item.quantity > 0) {
             let Quantity = parseInt(item.quantity);
@@ -88,12 +91,14 @@ const UpdateItem = () => {
                         <form onSubmit={updateStoke}>
                             <input className='mb-2' type="number" name='quantity' />
 
-                            <input type="submit" value="Update User" />
+                            <input type="submit" value="Update Stoke" />
+
                         </form>
 
                     </Card.Body>
 
                 </Card>
+                <Button onClick={() => navigateToItemDetail(_id)} variant="outline-dark rounded-pill mb-5 fw-bold mt-5">UPDATE</Button>
             </div>
         </div>
     );
