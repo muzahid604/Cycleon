@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const UpdateItem = () => {
     const { itemsId } = useParams();
     const [item, setItem] = useState({});
-    const navigate = useNavigate();
-    const navigateToItemDetail = _id => {
-        navigate(`/items/${_id}`);
-    }
 
     useEffect(() => {
         const url = `https://young-taiga-51882.herokuapp.com/items/${itemsId}`
@@ -98,7 +94,9 @@ const UpdateItem = () => {
                     </Card.Body>
 
                 </Card>
-                <Button onClick={() => navigateToItemDetail(_id)} variant="outline-dark rounded-pill mb-5 fw-bold mt-5">UPDATE</Button>
+                <Link to={`/myBikes/${_id}`}>
+                    <Button variant="outline-dark rounded-pill mb-5 fw-bold mt-5">UPDATE</Button>
+                </Link>
             </div>
         </div>
     );

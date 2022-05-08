@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 
 const SocialSign = () => {
+    const location = useLocation();
     const navigate = useNavigate();
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     if (user) {
@@ -17,6 +18,10 @@ const SocialSign = () => {
                 <p>Error: {error.message}</p>
             </div>
         );
+    }
+    let from = location.state?.from?.pathname || "/";
+    if (user) {
+        navigate(from, { replace: true });
     }
     if (loading) {
         return <div className='d-flex align-items-center justify-content-center mx-auto'><Spinner className='d-flex align-items-center justify-content-center' animation="grow" />
