@@ -1,0 +1,27 @@
+.not-found {
+    color: rgb(48, 9, 9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.not-found img {
+    margin-top: .7rem;
+    width: 25rem;
+
+}
+
+
+.not-found-link {
+    margin-top: 3rem;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0);
+    text-decoration: none;
+    border-radius: 2rem;
+    background: rgb(209, 174, 199);
+}
