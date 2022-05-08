@@ -5,7 +5,7 @@ const AddItems = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/items`;
+        const url = `https://young-taiga-51882.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',
             headers: {

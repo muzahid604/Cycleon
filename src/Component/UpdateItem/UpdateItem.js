@@ -6,7 +6,7 @@ const UpdateItem = () => {
     const { itemsId } = useParams();
     const [item, setItem] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/items/${itemsId}`
+        const url = `https://young-taiga-51882.herokuapp.com/items/${itemsId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data))
@@ -16,7 +16,7 @@ const UpdateItem = () => {
 
 
     return (
-        <div className='text-center'>
+        <div className='d-flex justify-content-center align-items-center'>
             <div className='text-center'>
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={picture} />
