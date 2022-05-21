@@ -21,6 +21,7 @@ const ManageItems = () => {
                 })
         }
     }
+    console.log(items)
     return (
         <div>
             <Table striped bordered hover>
@@ -33,10 +34,11 @@ const ManageItems = () => {
                     </tr>
                 </thead>
                 {
+                    items.length &&
                     items?.map(item =>
                         <tbody key={item._id}>
                             <tr>
-                                <td className='text-center'>{item.name.slice(0, 30)}</td>
+                                <td className='text-center'>{item?.name?.slice(0, 30)}</td>
                                 <td className='text-center'><img className='table-img' src={item.picture} alt="" /></td>
                                 <td className='text-center'>{item.quantity}</td>
                                 <td className='text-center'><Button onClick={() => handleDelete(item._id)} variant="outline-dark rounded-pill fw-bold">DELETE</Button></td>
