@@ -15,6 +15,7 @@ const Header = () => {
     return (
         <div>
             <Navbar expand="lg md ">
+                {/* banner */}
                 <Container fluid>
                     <Navbar.Brand href="#"><span className='fw-bold mx-5'>CYCLEON</span></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
