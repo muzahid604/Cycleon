@@ -9,14 +9,14 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 banner-img"
-                        src="https://i.ibb.co/VqHC5xN/nicolas-picard-Jj-BQLWs2-UPA-unsplash-1.jpg"
+                        src="https://i.ibb.co/R4f7BqT/man-riding-mountain-bike-low-angle.jpg"
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100 banner-img"
-                        src="https://i.ibb.co/XzXZRGR/marcell-viragh-IP2f-Hh-CGS0-unsplash-1.jpg"
+                        src="https://i.ibb.co/7KtfX0H/cyclist-sunny-day-bike-adventure-travel-photo.jpg"
                         alt="Second slide"
                     />
                 </Carousel.Item>

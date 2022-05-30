@@ -14,9 +14,9 @@ const Header = () => {
     };
     return (
         <div>
-            <Navbar expand="lg md">
+            <Navbar expand="lg md ">
                 <Container fluid>
-                    <Navbar.Brand href="#">CYCLEON</Navbar.Brand>
+                    <Navbar.Brand href="#"><span className='fw-bold mx-5'>CYCLEON</span></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -24,21 +24,21 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3'>HOME</Link>
-                            <Link style={{ textDecoration: 'none' }} to='/items' className='mx-3'>BIKES</Link>
+                            <Link style={{ textDecoration: 'none' }} to='/' className='mx-3 fw-bold'>HOME</Link>
+                            <Link style={{ textDecoration: 'none' }} to='/items' className='mx-3 fw-bold'>BIKES</Link>
                             {
-                                user ? <Link style={{ textDecoration: 'none' }} to='/manageItems' className='mx-3'>MANAGE BIKES</Link>
+                                user ? <Link style={{ textDecoration: 'none' }} to='/manageItems' className='mx-3 fw-bold'>MANAGE BIKES</Link>
                                     : <p></p>
                             }
                             {
-                                user ? <Link style={{ textDecoration: 'none' }} to='/addItems' className='mx-3'>ADD BIKES</Link>
+                                user ? <Link style={{ textDecoration: 'none' }} to='/addItems' className='mx-3 fw-bold'>ADD BIKES</Link>
                                     : <p></p>
                             }
                             {
-                                user ? <Link style={{ textDecoration: 'none' }} to='/myBikes' className='mx-3'>MY BIKES</Link>
+                                user ? <Link style={{ textDecoration: 'none' }} to='/myBikes' className='mx-3 fw-bold'>MY BIKES</Link>
                                     : <p></p>
                             }
-                            <Link style={{ textDecoration: 'none' }} to='/blogs' className='mx-3'>BLOGS</Link>
+                            <Link style={{ textDecoration: 'none' }} to='/blogs' className='mx-3 fw-bold'>BLOGS</Link>
 
                         </Nav>
                         <Form className="d-flex">
